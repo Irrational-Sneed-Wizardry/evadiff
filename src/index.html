@@ -1,0 +1,36 @@
+<!doctype html><meta charset="utf-8">
+<title>evadiff</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
+<link rel="stylesheet" href="main.css">
+<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/diff2html/bundles/css/diff2html.min.css" />
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/diff2html/bundles/js/diff2html-ui-slim.min.js"></script>
+
+<h2>evadiff</h2>
+
+<div class="file-drop-area">
+  <span class="fake-btn">Choose files</span>
+  <span class="file-msg">or drag and drop [mkv/ass/srt/vtt/txt] &middot; ctrl+v also works</span>
+  <input class="file-input" type="file" multiple accept=".mkv,.ass,.ssa,.srt,.vtt,.txt">
+</div>
+
+<div id="globalopt"></div>
+<div id="filelist"></div>
+<div id="fileopt"></div>
+
+<div id="diff"></div>
+
+<div id="afterdiff" style="display: none">
+<input type="button" id="jpgexport" value="Image export (jank)">
+<!--<br>
+<input type="button" id="upload" value="Upload">-->
+</div>
+
+<div class="info">
+  The sign is a subtle joke. The shop is called "Sneed's Feed & Seed", where feed and seed both end in the sound "-eed", thus rhyming with the name of the owner, Sneed. The sign says that the shop was "Formerly Chuck's", implying that the two words beginning with "F" and "S" would have ended with "-uck", rhyming with "Chuck". So, when Chuck owned the shop, it would have been called "Chuck's Fuck and Suck".<br>
+  <a href="https://github.com/Irrational-Sneed-Wizardry/evadiff">About</a>
+  <noscript>Please enable JavaScript.</noscript>
+</div>
+
+<script src="main.ts"></script>

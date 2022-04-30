@@ -1,0 +1,56 @@
+{
+  "name": "evadiff",
+  "version": "1.0.0",
+  "description": "Highly configurable subtitle comparison tool, works offline with optional online sharing.",
+  "scripts": {
+    "test": "standardx src/*.ts",
+    "dev": "parcel src/index.html",
+    "build": "parcel build src/index.html --public-url /public/evadiff/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Irrational-Sneed-Wizardry/evadiff.git"
+  },
+  "keywords": [
+    "subtitles",
+    "comparison",
+    "anime"
+  ],
+  "author": "eva",
+  "license": "GPLv3",
+  "bugs": {
+    "url": "https://github.com/Irrational-Sneed-Wizardry/evadiff/issues"
+  },
+  "homepage": "https://github.com/Irrational-Sneed-Wizardry/evadiff",
+  "private": true,
+  "eslintConfig": {
+    "rules": {
+      "no-unused-vars": "off",
+      "@typescript-eslint/no-unused-vars": "error"
+    }
+  },
+  "standardx": {
+    "parser": "@typescript-eslint/parser",
+    "plugins": [
+      "@typescript-eslint/eslint-plugin"
+    ]
+  },
+  "devDependencies": {
+    "@types/ebml": "^3.0.0",
+    "@types/progress-stream": "^2.0.0",
+    "@typescript-eslint/eslint-plugin": "^3.0.2",
+    "@typescript-eslint/parser": "^3.0.2",
+    "parcel-bundler": "^1.12.4",
+    "standardx": "^5.0.0",
+    "typescript": "^3.9.3"
+  },
+  "dependencies": {
+    "diff2html": "^3.4.17",
+    "difflib": "^0.2.4",
+    "filereader-stream": "^1.0.0",
+    "html-entities": "^2.3.3",
+    "html-to-image": "^1.9.0",
+    "matroska-subtitles": "github:po5/matroska-subtitles",
+    "subsrt": "github:po5/subsrt"
+  }
+}

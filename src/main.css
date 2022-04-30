@@ -1,0 +1,221 @@
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: #2a2a2a;
+  color: #ffe28a;
+  font-family: 'PT Sans', sans-serif;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+h2 {
+  text-align: center;
+  margin: 1em 0;
+}
+
+.file-drop-area {
+  border: 1px dashed #ffe28a;
+  border-radius: 3px;
+  position: relative;
+  width: 500px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 26px 20px 30px;
+  transition: 0.2s background-color;
+  box-sizing: border-box;
+}
+
+.is-active {
+  background-color: #ffe28a20;
+}
+
+.fake-btn {
+  border: 1px solid #ffe28a;
+  border-radius: 3px;
+  padding: 8px 15px;
+  margin-right: 8px;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.file-msg {
+  font-size: small;
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+  max-width: calc(100% - 130px);
+  vertical-align: middle;
+}
+
+.file-input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  opacity: 0;
+}
+
+.file-input:focus {
+  outline: none;
+}
+
+.info, #diff {
+  margin: 1em auto 33vh;
+  text-align: center;
+}
+
+.info {
+  padding-bottom: 2em;
+  max-width: 70em;
+}
+
+.info a {
+  color: #ffe28a;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 1px;
+}
+
+.info a:focus, .info a:hover {
+  text-decoration-thickness: unset;
+  text-decoration-style: wavy;
+  text-underline-offset: 0px;
+}
+
+#diff .d2h-code-side-linenumber, #diff .d2h-code-linenumber, #diff .d2h-file-wrapper, #diff .d2h-code-side-emptyplaceholder, #diff .d2h-emptyplaceholder {
+  background-color: #2a2a2a;
+  color: #ffe28a;
+}
+
+#diff .d2h-file-wrapper {
+  border-color: #ffe28a;
+}
+
+#diff .d2h-code-side-linenumber, #diff .d2h-code-linenumber {
+  border-color: #2a2a2a;
+  border-bottom: 10px;
+  border-right-color: #2a2a2a;
+  height: 1.1rem;
+  border-width: 0 2px !important;
+}
+
+#diff .d2h-code-side-linenumber.d2h-del, #diff .d2h-code-side-linenumber.d2h-ins , #diff .d2h-code-linenumber.d2h-del, #diff .d2h-code-linenumber.d2h-ins {
+  border-color: #ffe28a;
+  border-right-color: #2a2a2a;
+}
+
+#diff .d2h-info {
+  background-color: #3a3a3a !important;
+  color: #888;
+}
+
+#diff .d2h-del {
+  background-color: #3a302a;
+}
+
+#diff .d2h-code-line del, #diff .d2h-code-side-line del {
+  background-color: #7b482a;
+}
+
+#diff .d2h-ins {
+  background-color: #343930;
+}
+
+#diff .d2h-code-line ins, #diff .d2h-code-side-line ins {
+  background-color: #566a44;
+}
+
+#diff .d2h-file-wrapper .d2h-file-header {
+  background-color: #2a2a2a;
+  border-bottom-color: #ffe28a;
+}
+
+.d2h-file-name-wrapper .d2h-tag {
+  display: none;
+}
+
+.d2h-file-collapse {
+  display: none !important;
+}
+
+.d2h-diff-tbody {
+  border-right: 4px solid transparent;
+}
+
+.d2h-code-side-line.d2h-code-side-emptyplaceholder {
+  padding: 0;
+}
+
+tr.highlight .d2h-code-side-linenumber, tr.highlight .d2h-code-linenumber {
+  background-color: #877b54 !important;
+}
+
+tr.highlight .d2h-del, tr.highlight .d2h-ins, tr.highlight .d2h-cntx, tr.highlight .d2h-emptyplaceholder, tr.highlight .d2h-code-side-line.d2h-code-side-emptyplaceholder {
+  background-color: #5f5842 !important;
+}
+
+tr.highlight td.d2h-cntx {
+    border-left-color: #5f5842 !important;
+}
+
+.d2h-code-side-linenumber.d2h-info, .d2h-code-linenumber.d2h-info {
+  border: 0;
+}
+
+.d2h-code-line del, .d2h-code-line ins, .d2h-code-side-line del, .d2h-code-side-line ins {
+  vertical-align: baseline !important;
+}
+
+#filelist {
+  margin-left: 4em;
+  margin-right: 4em;
+  margin-bottom: 1em;
+  margin-top: 2em;
+  text-align: center;
+}
+
+.fileinfo {
+  display: inline-block;
+  border: 1px solid #ffe28a;
+  border-radius: 3px;
+  text-align: center;
+  padding: 0.5em;
+  margin: 0.5em;
+  cursor: pointer;
+  transition: 0.2s background-color;
+}
+
+#globalopt .fileinfo {
+  position: relative;
+  text-align: left;
+  padding-right: 2em;
+}
+
+#globalopt {
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+input[type="checkbox"] {
+  filter: invert(40%);
+}
+
+input[type="checkbox"]:checked {
+  filter: invert(100%) hue-rotate(26deg) brightness(1.2);
+}
+
+.option {
+  display: inline-block;
+  vertical-align: middle;
+  position: absolute;
+  right: 0.6em;
+}
